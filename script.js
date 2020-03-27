@@ -4,7 +4,7 @@ let currentTime = dateNo.format('Hr')
 currentTime = parseInt(currentTime)
 
 $("#currentDay").text(dateNo.format("MMMM Do YYYY, h:mm:ss a"));
-console.log ("current day and time")
+//console.log ("current day and time"
 
 
 
@@ -84,5 +84,3 @@ $("button").on("click",function(){
     eleventhusertask_7PM.value = toDo_7PMlocalStorage;
     twelvethusertask_8PM.value = toDo_8PMlocalStorage;
     thirdteenusertask_9PM.value = toDo_9PMlocalStorage;
-
-   
