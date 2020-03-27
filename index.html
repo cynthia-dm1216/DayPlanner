@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+</head>
+
+<body>
+    <header class="jumbotron">
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
+    </header>
+    <!-- Timeblocks go here -->
+    <div id = "timeBlocks" class="container">
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>9AM</span></div>
+            <div class="col-8" id="datediv">
+                <input type="text" id="first_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="9"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>10AM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="second_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="10"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>11AM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="third_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save-sec">
+                <button type="button" class="btn btn-ligh" id="11"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>Noon</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="fourth_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="Noon"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>1PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="fifth_toDo" placeholder="Daily Task">
+         </div>
+         <div class="col-2" id="save_sec">
+            <button type="button" class="btn btn-light" id="1"><i class="fas fa-save"></i></button>
+        </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>2PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="sixth_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="2"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>3PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="seventh_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="3"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>4PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="eigth_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="4"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>5PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="nineth_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="5"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>6PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="tenth_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="6"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>7PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="eleventh_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="7"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>8PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="twelveth_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="8"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div id="input-row" class="row">
+            <div class="col-2 fecha" id="datediv"><span>9PM</span></div>
+            <div class="col-8" id="task-input">
+                <input type="text" id="thirdteen_toDo" placeholder="Daily Task">
+            </div>
+            <div class="col-2" id="save_sec">
+                <button type="button" class="btn btn-light" id="9"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
