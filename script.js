@@ -6,7 +6,19 @@ currentTime = parseInt(currentTime)
 $("#currentDay").text(dateNo.format("MMMM Do YYYY, h:mm:ss a"));
 //console.log ("current day and time"
 
-
+$('input').each(function(){
+  var inputEl = $(this);
+  console.log(inputEl);
+  if (inputEl.data().time < dateNo) {
+    inputEl.addClass('past');
+  };
+  if (inputEl.data().time == dateNo) {
+    inputEl.addClass('present');
+  };
+  if (inputEl.data().time > dateNo) {
+    inputEl.addClass('future');
+  };
+})
 
 //save button click event
 var firstusertask_9AM = document.getElementById("first_toDo");
@@ -26,21 +38,22 @@ var thirdteenusertask_9PM = document.getElementById("thirdteen_toDo");
 
 $("button").on("click",function(){
     var task_obj = {
-      value_9AM: firstuserinput_9AM.value,
-      value_10AM: seconduserinput_10AM.value, 
-      value_11AM: thirduserinput_11AM.value,  
-      value_Noon: fourthuserinput_Noon.value,
-      value_1PM: fifthuserinput_1PM.value,
-      value_2PM: sixthuserinput_2PM.value,
-      value_3PM: seventhuserinput_3PM.value,
-      value_4PM: eigthuserinput_4PM.value,
-      value_5PM: ninethuserinput_5PM.value,
-      value_6PM: tenthuserinput_6PM.value,
-      value_7PM: eleventhuserinput_7PM.value,
-      value_8PM: twelveuserinput_8PM.value,
-      value_9PM: thirdteenuserinput_9PM.value,
+      value_9AM: firstusertask_9AM.value,
+      value_10AM: secondusertask_10AM.value, 
+      value_11AM: thirdusertask_11AM.value,  
+      value_Noon: fourthusertask_Noon.value,
+      value_1PM: fifthusertask_1PM.value,
+      value_2PM: sixthusertask_2PM.value,
+      value_3PM: seventhusertask_3PM.value,
+      value_4PM: eigthusertask_4PM.value,
+      value_5PM: ninethusertask_5PM.value,
+      value_6PM: tenthusertask_6PM.value,
+      value_7PM: eleventhusertask_7PM.value,
+      value_8PM: twelvethusertask_8PM.value,
+      value_9PM: thirdteenusertask_9PM.value,
     }
     localStorage.setItem("toDo_9AM", task_obj.value_9AM);
+    console.log(task_obj);
     localStorage.setItem("toDo_10AM", task_obj.value_10AM);
     localStorage.setItem("toDo_11AM", task_obj.value_11AM);
     localStorage.setItem("toDo_Noon", task_obj.value_Noon);
@@ -84,3 +97,4 @@ $("button").on("click",function(){
     eleventhusertask_7PM.value = toDo_7PMlocalStorage;
     twelvethusertask_8PM.value = toDo_8PMlocalStorage;
     thirdteenusertask_9PM.value = toDo_9PMlocalStorage;
+
