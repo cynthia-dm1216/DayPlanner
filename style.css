@@ -62,7 +62,7 @@ body {
     color: white;
   }
   
-  .saveBtn {
+  #saveBtn {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -75,7 +75,7 @@ body {
     transition: all .3s ease-in-out;
   }
 
-  .btn {
+  /* .btn {
     color: blue;
     display: block;
     position: relative;
@@ -101,4 +101,4 @@ input{
   bottom: 25%;
 
 }
-  
+   */
