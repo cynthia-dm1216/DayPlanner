@@ -6,19 +6,6 @@ currentTime = parseInt(currentTime)
 $("#currentDay").text(dateNo.format("MMMM Do YYYY, h:mm:ss a"));
 //console.log ("current day and time"
 
-$('input').each(function(){
-  var inputEl = $(this);
-  console.log(inputEl);
-  if (inputEl.data().time < dateNo) {
-    inputEl.addClass('past');
-  };
-  if (inputEl.data().time == dateNo) {
-    inputEl.addClass('present');
-  };
-  if (inputEl.data().time > dateNo) {
-    inputEl.addClass('future');
-  };
-})
 
 //save button click event
 var firstusertask_9AM = document.getElementById("first_toDo");
@@ -98,3 +85,16 @@ $("button").on("click",function(){
     twelvethusertask_8PM.value = toDo_8PMlocalStorage;
     thirdteenusertask_9PM.value = toDo_9PMlocalStorage;
 
+    $('input').each(function(){
+      var inputEl = $(this);
+      console.log(inputEl);
+      if (inputEl.data().time < dateNo) {
+        inputEl.addClass('past');
+      };
+      if (inputEl.data().time == dateNo) {
+        inputEl.addClass('present');
+      };
+      if (inputEl.data().time > dateNo) {
+        inputEl.addClass('future');
+      };
+    })
