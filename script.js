@@ -85,7 +85,7 @@ $("button").on("click",function(){
     twelvethusertask_8PM.value = toDo_8PMlocalStorage;
     thirdteenusertask_9PM.value = toDo_9PMlocalStorage;
 
-    $(".input-row").each(function(){
+    $(".time-block").each(function(){
       var inputEl = $(this);
       console.log(inputEl);
       if (inputEl.data().time < dateNo) {
