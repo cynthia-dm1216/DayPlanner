@@ -1,9 +1,4 @@
-let dateNo = moment();
-
-let currentTime = dateNo.format('Hr')
-currentTime = parseInt(currentTime)
-
-$("#currentDay").text(dateNo.format("MMMM Do YYYY, h:mm:ss a"));
+$("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
 //console.log ("current day and time"
 
 
@@ -15,7 +10,7 @@ var fourthusertask_Noon = document.getElementById("fourth_toDo");
 var fifthusertask_1PM = document.getElementById("fifth_toDo");
 var sixthusertask_2PM= document.getElementById("sixth_toDo");
 var seventhusertask_3PM = document.getElementById("seventh_toDo");
-var eigthusertask_4PM = document.getElementById("eigth_toDo");
+var eigthusertask_4PM = document.getElementById("eight_toDo");
 var ninethusertask_5PM = document.getElementById("nineth_toDo");
 var tenthusertask_6PM = document.getElementById("tenth_toDo");
 var eleventhusertask_7PM = document.getElementById("eleventh_toDo");
@@ -71,11 +66,12 @@ $("button").on("click",function(){
    
 
    firstusertask_9AM.value = toDo_9AMlocalStorage;
-    console.log(toDo_9AMlocalStorage)
+    console.log(toDo_9AMlocalStorage);
     secondusertask_10AM.value = toDo_10AMlocalStorage;
     thirdusertask_11AM.value = toDo_11AMlocalStorage;
     fourthusertask_Noon.value = toDo_NoonlocalStorage;
     fifthusertask_1PM.value = toDo_1PMlocalStorage;
+    console.log(fifthusertask_1PM);
     sixthusertask_2PM.value = toDo_2PMlocalStorage;
     seventhusertask_3PM.value = toDo_3PMlocalStorage;
     eigthusertask_4PM.value = toDo_4PMlocalStorage;
@@ -85,16 +81,25 @@ $("button").on("click",function(){
     twelvethusertask_8PM.value = toDo_8PMlocalStorage;
     thirdteenusertask_9PM.value = toDo_9PMlocalStorage;
 
-    $(".time-block").each(function(){
-      var inputEl = $(this);
-      console.log(inputEl);
-      if (inputEl.data().time < dateNo) {
-        inputEl.addClass('past');
-      };
-      if (inputEl.data().time == dateNo) {
-        inputEl.addClass('present');
-      };
-      if (inputEl.data().time > dateNo) {
-        inputEl.addClass('future');
-      };
-    })
+
+   function hourUpdate() {
+     //get current time
+     var now = moment().hour();
+     $('input-row').each(function(){
+     var hourBlock = parseInt($(this).attr('id').split('_')[1]);
+
+     //past,future and present time check
+     if(hourBlock < now) {
+       $(this).addClass('past');
+     }else if (hourBlock === now ){
+       $(this).removeClass('past');
+       $(this).addClass('present');
+     }else {
+       $(this).removeClass('past');
+       $(this).removeClass('present');
+       $(this).addClass('future');
+     }
+    });
+   }
+ 
+   hourUpdate();
